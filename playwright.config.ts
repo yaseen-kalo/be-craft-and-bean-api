@@ -6,4 +6,10 @@ export default defineConfig({
   use: {
     baseURL: env.baseURL,
   },
+
+  webServer: {
+    command: "npx tsx mock-server/server.ts",
+    url: "http://localhost:3001/v1/categories",
+    reuseExistingServer: !process.env.CI,
+  },
 });
