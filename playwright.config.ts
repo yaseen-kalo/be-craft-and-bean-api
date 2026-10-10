@@ -7,6 +7,8 @@ export default defineConfig({
     baseURL: env.baseURL,
   },
 
+  reporter: [["list"], ["html", { open: "never" }]],
+
   webServer: {
     command: "npx tsx mock-server/server.ts",
     url: "http://localhost:3001/v1/categories",
